@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <title>Music Player</title>
+</head>
+<body>
+  <div class="player">
+    <img src="SONGS/head8.jpeg" alt="headphone image" id="headphone">
+    <audio id="player" ontimeupdate ="updateProgress()">
+      <source id="source">
+        Audio not supported
+    </audio>
+
+    <progress id="progress" value="0" max="100"></progress>
+
+    <div id="controls">
+      <p id="current-song"></p>
+      <div class="controls-wrapper">
+        <span onclick="playAudio()">&#9658;</span>
+        <span onclick="pauseAudio()">&#10074;&#10074;</span>
+      </div>
+      <p>Volume:</p>
+      <div class="volume">
+        <span>-</span>
+        <input type="range" id="volume-slider" min="0" max="1" step="0.1">
+        <span>+</span>
+      </div>
+    </div>
+
+    <h2>My Songs:</h2>
+    <div id="song-list"></div>
+    <p>Music: <a href="https://www.busysinging.com"></a>www.busysinging.com</p>
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+</html>
